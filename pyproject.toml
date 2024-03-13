@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "cycloid"
+version = "0.1.0"
+description = "tools for generating cycloidal geometery"
+authors = ["Andrew Alderfer <drew@drewalderfer.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12"
+notebook = "^7.0.6"
+numpy = "^1.26.2"
+matplotlib = "^3.8.2"
+sympy = "^1.12"
+
+[tool.poetry.group.utils]
+optional = true
+
+[tool.poetry.group.utils.dependencies]
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/__pycache__",
+    "./.ipynb_checkpoints",
+]
+venvPath = "/home/drew/.cache/pypoetry/virtualenvs"
+venv = "cycloid-S7Np8sXG-py3.12"
+
+reportMissingTypeStubs = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
